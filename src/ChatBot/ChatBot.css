@@ -1,0 +1,150 @@
+.lovable-container {
+  font-family: "Inter", sans-serif;
+  color: white;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar01 {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
+}
+
+.logo img {
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-links01 a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.nav-links01 a:hover {
+  color: white;
+}
+
+.user-section .user {
+  background: #ff4500;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff4e50, #fc913a, #f9d423);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fffcfc;
+}
+ 
+.input-box {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);           
+  -webkit-backdrop-filter: blur(10px);   
+  border-radius: 12px;
+  padding: 8px 12px;
+  width: 600px;
+  max-width: 90%;
+  color: whitesmoke;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.send-btn {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+ 
+.tags {
+  margin: 15px 0;
+}
+
+.tags button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  margin: 0 5px;
+  border-radius: 18px;
+  font-size: 14px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tags button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+ 
+.suggestions {
+  margin-top: 20px;
+}
+
+.suggestions button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.suggestions button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}

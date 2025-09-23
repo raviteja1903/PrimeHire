@@ -1,0 +1,88 @@
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111;
+}
+.card-container {
+  background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
+}
+
+.simple-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+  padding: 40px;
+}
+
+.simple-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 40px;
+  color: #fff;
+  min-height: 320px;
+  min-width: 350px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.simple-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+}
+
+.simple-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #000 85%);
+  opacity: 0.6;
+  border-radius: 24px;
+  z-index: 0;
+}
+
+.simple-card .icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.simple-card .text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.card-overlay {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.simple-card .text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.simple-card .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ddd;
+  display: block;
+}

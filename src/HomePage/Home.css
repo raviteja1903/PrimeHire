@@ -1,0 +1,157 @@
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.landing-content {
+  max-width: 800px;
+  text-align: left;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+ 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  background: #f9f9f9;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.badge span {
+  color: #555;
+}
+
+.badge a {
+  color: #1a0dab;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #111;
+  animation: slideIn 1.2s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.cta {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #111;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  animation: popUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.cta:hover {
+  background: #111;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+ 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .landing {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+}
