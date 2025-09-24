@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
+/* =====================
+   GLOBAL RESET
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,26 +11,34 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: 700; /* Bold everywhere */
-  color: white;
+  font-weight: 700;
   background: #111;
+  color: white;
 }
 
+/* =====================
+   MAIN CONTAINER
+===================== */
 .lovable-container {
   min-height: 100vh;
-  background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
+  padding: 0 15px;
 }
 
+/* =====================
+   NAVBAR
+===================== */
 .navbar01 {
   width: 100%;
-  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 40px;
   background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -35,8 +46,14 @@ body {
   object-fit: contain;
 }
 
+.nav-links01 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
 .nav-links01 a {
-  margin: 0 12px;
   text-decoration: none;
   color: #ccc;
   font-weight: 700;
@@ -51,12 +68,15 @@ body {
   background: #ff4500;
   padding: 8px 12px;
   border-radius: 50%;
-  font-weight: 700;
 }
 
+/* =====================
+   HERO SECTION
+===================== */
 .hero {
   text-align: center;
-  margin-top: 60px;
+  margin: 60px 0 30px 0;
+  padding: 0 15px;
 }
 
 .hero h1 {
@@ -73,71 +93,71 @@ body {
 .hero p {
   margin-top: 10px;
   font-size: 18px;
-  color: #fffcfc;
   font-weight: 700;
+  color: #fffcfc;
 }
- 
+
+/* =====================
+   INPUT BOX
+===================== */
 .input-box {
-  margin: 30px auto;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1); 
-  backdrop-filter: blur(10px);           
-  -webkit-backdrop-filter: blur(10px);   
-  border-radius: 12px;
-  padding: 8px 12px;
+  justify-content: space-between;
   width: 600px;
-  max-width: 90%;
-  color: whitesmoke;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  font-weight: 700;
+  padding: 8px 12px;
+  margin: 30px auto;
 }
 
 .input-box input {
   flex: 1;
   border: none;
+  outline: none;
   background: transparent;
   color: white;
   font-size: 16px;
-  outline: none;
   font-weight: 700;
 }
 
 .send-btn {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 8px;
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
-  font-weight: 700;
+  transition: background 0.3s;
 }
 
 .send-btn:hover {
   background: rgba(255, 255, 255, 0.25);
 }
- 
+
+/* =====================
+   TAGS
+===================== */
 .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
   margin: 15px 0;
 }
 
 .tags button {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 14px;
-  margin: 0 5px;
   border-radius: 18px;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -145,106 +165,114 @@ body {
 .tags button:hover {
   background: rgba(255, 255, 255, 0.25);
 }
- 
+
+/* =====================
+   SUGGESTIONS (SIDE BY SIDE)
+===================== */
 .suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
 .suggestions button {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 18px;
-  margin: 8px;
   border-radius: 20px;
-  color: white;
   font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.3s;
+  display: inline-flex; /* keep side-by-side */
 }
 
 .suggestions button:hover {
   background: rgba(255, 255, 255, 0.25);
 }
+
+/* =====================
+   MEDIA QUERIES
+===================== */
+
+/* Tablets / small laptops */
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 2.5rem;
   }
-
   .input-box {
     width: 80%;
   }
-
   .nav-links01 a {
-    margin: 0 8px;
     font-size: 14px;
   }
 }
 
-/* Mobile Devices */
+/* Tablets & large mobiles */
 @media (max-width: 768px) {
   .navbar01 {
-    flex-direction: column;
-    text-align: center;
+    /* flex-direction: column; */
     padding: 10px 20px;
+    text-align: center;
   }
-
   .nav-links01 {
     margin-top: 10px;
+    justify-content: center;
   }
-
   .hero h1 {
     font-size: 2rem;
   }
-
   .hero p {
     font-size: 16px;
   }
-
   .input-box {
-    width: 95%;
-    flex-direction: column;
+    /* flex-direction: column; */
     padding: 10px;
   }
-
   .input-box input {
     width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: -3px;
   }
-
   .send-btn {
     align-self: center;
   }
-
-  .tags, .suggestions {
-    text-align: center;
-  }
-
-  .tags button, .suggestions button {
-    margin: 5px auto;
-    display: block;
-  }
 }
 
-/* Small Mobiles */
+/* Small mobiles */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.6rem;
   }
-
   .hero p {
     font-size: 14px;
   }
-
   .nav-links01 a {
     font-size: 12px;
   }
-
-  .tags button, .suggestions button {
+  .tags button,
+  .suggestions button {
     font-size: 12px;
     padding: 6px 12px;
+  }
+}
+
+/* Extra small mobiles */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+  .hero p {
+    font-size: 13px;
+  }
+  .input-box {
+    padding: 8px;
+  }
+  .tags button,
+  .suggestions button {
+    padding: 5px 10px;
+    font-size: 11px;
   }
 }
