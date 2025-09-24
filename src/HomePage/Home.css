@@ -1,8 +1,16 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Bold everywhere */
+  background: #fff;
+  color: #111;
 }
 
 .landing {
@@ -42,7 +50,7 @@
 
 .badge a {
   color: #1a0dab;
-  font-weight: 500;
+  font-weight: 700; /* Bold link */
   text-decoration: none;
 }
 
@@ -59,8 +67,9 @@ h1 {
 
 p {
   font-size: 1.05rem;
+  font-weight: 700;
   line-height: 1.6;
-  color: #666;
+  color: #444;
   margin-bottom: 2rem;
   animation: fadeIn 1.5s ease forwards;
   opacity: 0;
@@ -73,7 +82,7 @@ p {
   border-radius: 8px;
   background: #fff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   transform: scale(1);
@@ -127,6 +136,7 @@ p {
   }
 }
  
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;

@@ -1,6 +1,19 @@
-.lovable-container {
-  font-family: "Inter", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Bold everywhere */
   color: white;
+  background: #111;
+}
+
+.lovable-container {
   min-height: 100vh;
   background: radial-gradient(circle at center, #f2c5b7, #c8ced4 70%);
   display: flex;
@@ -26,6 +39,7 @@
   margin: 0 12px;
   text-decoration: none;
   color: #ccc;
+  font-weight: 700;
   transition: color 0.2s;
 }
 
@@ -37,7 +51,7 @@
   background: #ff4500;
   padding: 8px 12px;
   border-radius: 50%;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .hero {
@@ -47,7 +61,7 @@
 
 .hero h1 {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .gradient-text {
@@ -60,6 +74,7 @@
   margin-top: 10px;
   font-size: 18px;
   color: #fffcfc;
+  font-weight: 700;
 }
  
 .input-box {
@@ -75,6 +90,7 @@
   max-width: 90%;
   color: whitesmoke;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 700;
 }
 
 .input-box input {
@@ -84,6 +100,7 @@
   color: white;
   font-size: 16px;
   outline: none;
+  font-weight: 700;
 }
 
 .send-btn {
@@ -96,6 +113,7 @@
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 700;
 }
 
 .send-btn:hover {
@@ -116,6 +134,7 @@
   border-radius: 18px;
   font-size: 14px;
   color: white;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -141,10 +160,91 @@
   border-radius: 20px;
   color: white;
   font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .suggestions button:hover {
   background: rgba(255, 255, 255, 0.25);
+}
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .input-box {
+    width: 80%;
+  }
+
+  .nav-links01 a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .navbar01 {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .nav-links01 {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .input-box {
+    width: 95%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .input-box input {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .send-btn {
+    align-self: center;
+  }
+
+  .tags, .suggestions {
+    text-align: center;
+  }
+
+  .tags button, .suggestions button {
+    margin: 5px auto;
+    display: block;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .nav-links01 a {
+    font-size: 12px;
+  }
+
+  .tags button, .suggestions button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 }

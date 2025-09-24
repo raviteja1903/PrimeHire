@@ -1,4 +1,6 @@
- 
+/* Import Orbitron for robotic text */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&display=swap');
+
 .splash-container {
   display: flex;
   justify-content: center;
@@ -12,7 +14,7 @@
   perspective: 1000px;
 }
 
- 
+/* Animated Grid Overlay */
 .splash-container::before {
   content: "";
   position: absolute;
@@ -20,21 +22,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(rgba(0,255,198,0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(0,255,198,0.1) 1px, transparent 1px);
+  background-image: 
+    linear-gradient(rgba(0,255,198,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,198,0.1) 1px, transparent 1px);
   background-size: 40px 40px;
   animation: moveGrid 6s linear infinite;
   z-index: 0;
 }
+
 @keyframes moveGrid {
   0% { background-position: 0 0; }
   100% { background-position: 40px 40px; }
 }
 
- 
+/* Robotic Neon Text */
 .robotic-text {
   font-family: "Orbitron", sans-serif;
-  font-size: 90px;        /* ⬆️ Increased size */
+  font-size: 90px;
   font-weight: 800;
   text-transform: uppercase;
   color: #00ffc6;
@@ -52,15 +56,14 @@
   perspective: 800px;
 }
 
- 
 @keyframes floatText {
   0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
   50% { transform: translateY(-10px) rotateX(10deg) rotateY(-10deg); }
 }
 
- 
+/* Splash Logo */
 .splash-logo {
-  width: 280px;    
+  width: 280px;
   height: auto;
   opacity: 0;
   animation: fadeInLogo 2s ease forwards, spin3D 6s linear infinite;
@@ -77,37 +80,51 @@
   100% { transform: rotateY(360deg) rotateX(0deg) scale(1); }
 }
 
- 
+/* Pulse Glow Circle */
 .splash-container::after {
   content: "";
   position: absolute;
-  width: 500px;  
+  width: 500px;
   height: 500px;
   border-radius: 50%;
   background: rgba(0, 255, 198, 0.15);
   animation: pulseWave 4s infinite ease-in-out;
   z-index: 0;
 }
+
 @keyframes pulseWave {
   0% { transform: scale(0.6); opacity: 0.6; }
   50% { transform: scale(1.2); opacity: 0.2; }
   100% { transform: scale(0.6); opacity: 0.6; }
 }
 
- 
+/* Neon Flicker Effect */
 @keyframes neonFlicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
   20%, 24%, 55% { opacity: 0.4; }
 }
 
+/* =====================
+   MEDIA QUERIES
+===================== */
+
+/* Tablets */
 @media (max-width: 768px) {
   .robotic-text { font-size: 60px; }
   .splash-logo { width: 200px; }
   .splash-container::after { width: 350px; height: 350px; }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
-  .robotic-text { font-size: 40px; }
+  .robotic-text { font-size: 40px; letter-spacing: 3px; }
   .splash-logo { width: 150px; }
   .splash-container::after { width: 250px; height: 250px; }
+}
+
+/* Small Devices */
+@media (max-width: 360px) {
+  .robotic-text { font-size: 32px; letter-spacing: 2px; }
+  .splash-logo { width: 120px; }
+  .splash-container::after { width: 200px; height: 200px; }
 }
